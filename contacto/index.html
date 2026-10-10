@@ -31,7 +31,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Escríbenos por WhatsApp | Colstorage</title>
+  <title>Conectando con WhatsApp | Colstorage</title>
   <link rel="icon" type="image/png" href="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/ico/favicon.png">
   <meta name="theme-color" content="#14212b">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -42,22 +42,25 @@
     .card{max-width:420px}
     .logo{background:#fff;border-radius:12px;padding:6px 12px;display:inline-block;margin-bottom:28px}
     .logo img{height:38px;display:block}
+    .spinner{width:54px;height:54px;border-radius:50%;border:5px solid rgba(255,255,255,.15);border-top-color:#25d366;
+      margin:0 auto 22px;animation:spin .9s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
     h1{font-size:1.35rem;margin-bottom:8px}
     p{color:#c3ced6;margin-bottom:26px}
     a.btn{display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;text-decoration:none;
       font-weight:700;font-size:1.1rem;padding:16px 30px;border-radius:999px;box-shadow:0 10px 30px rgba(37,211,102,.35);
-      animation:pulse 2s ease-in-out infinite}
+    }
     a.btn:hover{background:#1da851}
-    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
     a.btn img{width:26px;height:26px}
-    @media (prefers-reduced-motion:reduce){a.btn{animation:none}}
+    @media (prefers-reduced-motion:reduce){.spinner{animation:none}}
   </style>
 </head>
 <body>
   <div class="card">
     <div class="logo"><img src="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/logo.png" alt="Colstorage"></div>
-    <h1>¡Tu primer mes gratis te espera!</h1>
-    <p>Toca el botón y escríbenos por WhatsApp para apartar tu mini bodega.</p>
+    <div class="spinner" aria-hidden="true"></div>
+    <h1>Te estamos llevando a WhatsApp…</h1>
+    <p>Si no se abre en unos segundos, toca el botón.</p>
     <a class="btn" id="wa" href="#">
       <img src="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/WhatsApp.png" alt="">
       Abrir WhatsApp
@@ -69,15 +72,13 @@
       encodeURIComponent("Hola, quiero la promoción del primer mes gratis en mini bodegas");
     document.getElementById("wa").href = WA;
 
-    // Al hacer clic: registra la conversión de Google Ads y luego abre WhatsApp
-    document.getElementById("wa").addEventListener("click", function (e) {
-      e.preventDefault();
-      gtag_report_conversion(WA);
-      // Respaldo: si Google no responde (p. ej. bloqueador de anuncios), abre WhatsApp igual
-      setTimeout(function () {
-        if (!window.__waOpened) { window.__waOpened = true; window.location = WA; }
-      }, 1200);
-    });
+    // Al cargar la página: registra la conversión de Google Ads y abre WhatsApp automáticamente
+    gtag_report_conversion(WA);
+    // Respaldo: si Google no responde (p. ej. bloqueador de anuncios), abre WhatsApp igual
+    setTimeout(function () {
+      if (!window.__waOpened) { window.__waOpened = true; window.location = WA; }
+    }, 1200);
+    // El botón queda solo como respaldo manual (no vuelve a contar la conversión)
   </script>
 </body>
 </html>
