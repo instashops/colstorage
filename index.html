@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mini Bodegas Bogota COLSTORAGE</title>
+  <meta name="description" content="Somos una empresa de arrendamiento de mini bodegas y bodegas personales en Bogotá">
+  <meta name="keywords" content="mini bodegas bogota, bodegas personales, bodegas personales bogota, minibodegas, minibodegas bogota">
+  <meta name="author" content="mini bodegas bogota">
+  <meta name="robots" content="ALL">
+  <meta property="og:title" content="Mini bodegas Bogota | Bodegas Personales">
+  <link rel="canonical" href="https://landing.colstorage.com.co/">
+  <link rel="icon" href="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --cs-primary:#f39c12; --cs-dark:#1f2a36; --cs-light:#f7f7f7; }
+    html { scroll-behavior:smooth; scroll-padding-top:80px; }
+    body { font-family:'Open Sans',sans-serif; color:#444; background:#fff; }
+    h1,h2,h3,h4,.navbar { font-family:'Montserrat',sans-serif; }
+    .navbar { background:var(--cs-dark); }
+    .navbar-brand img { height:48px; }
+    .navbar .nav-link { color:#fff; text-transform:uppercase; font-size:.85rem; font-weight:600; letter-spacing:.5px; }
+    .navbar .nav-link:hover { color:var(--cs-primary); }
+    .hero { background:linear-gradient(135deg,var(--cs-dark),#34495e); color:#fff; padding:150px 0 90px; text-align:center; }
+    .hero h1 { font-weight:700; font-size:clamp(2rem,5vw,3.4rem); text-transform:uppercase; }
+    .hero p { font-size:1.25rem; font-style:italic; max-width:720px; margin:1rem auto 2rem; }
+    .carousel-indicators [data-bs-target]{ background:var(--cs-primary); }
+    .btn-cs { background:var(--cs-primary); color:#fff; font-weight:700; text-transform:uppercase; border:none; padding:.8rem 2rem; }
+    .btn-cs:hover { background:#d68910; color:#fff; }
+    section { padding:80px 0; }
+    .section-title { text-transform:uppercase; font-weight:700; color:var(--cs-dark); }
+    .section-sub { font-style:italic; color:#777; }
+    hr.cs { width:80px; border-top:3px solid var(--cs-primary); opacity:1; margin:1.25rem auto 2.5rem; }
+    .feature img { max-width:120px; height:auto; margin-bottom:1rem; }
+    .feature h4 { font-weight:700; color:var(--cs-dark); font-size:1.15rem; }
+    .bg-soft { background:var(--cs-light); }
+    .cta { background:var(--cs-primary); color:#fff; text-align:center; padding:50px 0; }
+    .cta a { color:#fff; text-decoration:underline; }
+    footer { background:var(--cs-dark); color:#ddd; padding:60px 0 30px; }
+    footer h4 { color:#fff; font-size:1.05rem; text-transform:uppercase; }
+    footer a { color:var(--cs-primary); text-decoration:none; }
+    .float-btns { position:fixed; right:16px; bottom:16px; display:flex; flex-direction:column; gap:10px; z-index:1050; }
+    .float-btns img { width:56px; height:56px; }
+  </style>
+</head>
+<body id="page-top">
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#page-top"><img src="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/logo.png" alt="Colstorage"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#page-top">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://colstorage.com.co/knowledgebase.php?action=displayarticle&amp;id=12">Galería</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://colstorage.com.co/knowledgebase.php?action=displaycat&amp;catid=7">Precios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contáctanos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div id="slider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner pb-5">
+        <div class="carousel-item active">
+          <h1>Mini bodegas</h1>
+          <p>Espacios independientes, de todos los tamaños.</p>
+        </div>
+        <div class="carousel-item">
+          <h1>Cajas plásticas en espacios compartidos - Smartbox</h1>
+          <p>Son cajas de seguridad plásticas apiladas en espacios compartidos, donde tu guardas tus objetos y solicitas que las llevemos a donde tú quieras</p>
+        </div>
+        <div class="carousel-item">
+          <h1>Transporte urbano</h1>
+          <p>Desde la Guajira hasta Leticia llevamos tus mercancías</p>
+        </div>
+      </div>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Mini bodegas"></button>
+        <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Smartbox"></button>
+        <button type="button" data-bs-target="#slider" data-bs-slide-to="2" aria-label="Transporte urbano"></button>
+      </div>
+    </div>
+    <a href="#about" class="btn btn-cs mt-2">Conoce más</a>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container text-center">
+    <h2 class="section-title">Tenemos lo que necesita.</h2>
+    <hr class="cs">
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3 feature">
+        <img src="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/new/1.png" alt="Mini bodegas">
+        <h4>Mini bodegas</h4>
+        <p>Precios desde $40.000, tamaños desde 1 m3 hasta 40 m3, puedes guardar lo que quieras.</p>
+      </div>
+      <div class="col-sm-6 col-lg-3 feature">
+        <img src="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/new/2.png" alt="Smartbox">
+        <h4>Smartbox</h4>
+        <p>Mas económicas , en espacios compartidos y se transportan fácilmente.</p>
+      </div>
+      <div class="col-sm-6 col-lg-3 feature">
+        <img src="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/new/3.png" alt="Logística">
+        <h4>Logística</h4>
+        <p>Requieres guardar stock y distribuirlo en Bogotá , nosotros lo hacemos.</p>
+      </div>
+      <div class="col-sm-6 col-lg-3 feature">
+        <img src="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/new/4.png" alt="Transporte urbano">
+        <h4>Transporte urbano</h4>
+        <p>Tenemos vans hasta camiones de 20 toneladas,tú decides.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tipos" class="bg-soft">
+  <div class="container text-center">
+    <h2 class="section-title">Tipos de Mini bodegas</h2>
+    <hr class="cs">
+    <img class="img-fluid" src="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/team.png" alt="Tipos de mini bodegas">
+  </div>
+</section>
+
+<section id="beneficios">
+  <div class="container text-center">
+    <h2 class="section-title">Beneficios</h2>
+    <p class="section-sub">Todos nuestros clientes nos recomiendan, estas en buenas manos.</p>
+    <hr class="cs">
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-4 feature">
+        <img src="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/new/5.png" alt="Control de inventario">
+        <h4>Control de inventario</h4>
+        <p>Quieres ver si está en tu bodega personal y solicitar un traslado desde tu computador, lo hacemos posible con nuestros sistema online de control de inventario.</p>
+      </div>
+      <div class="col-sm-6 col-lg-4 feature">
+        <img src="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/new/6.png" alt="Servicio al cliente">
+        <h4>Servicio al cliente</h4>
+        <p>Nos tomamos enserio la atención al cliente, siempre encontraras una sonrisa y soluciones a tus necesidades.</p>
+      </div>
+      <div class="col-sm-6 col-lg-4 feature">
+        <img src="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/new/7.png" alt="Múltiples ubicaciones">
+        <h4>Múltiples ubicaciones</h4>
+        <p>Para tu comodidad tenemos dos sedes en lugares estratégicos de Bogotá , escoge el que mas te guste.</p>
+      </div>
+      <div class="col-sm-6 col-lg-4 feature">
+        <img src="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/new/10.png" alt="Precios justos">
+        <h4>Precios justos</h4>
+        <p>Paga desde la comodidad de tu casa y en relación precio beneficio, créenos somos la mejor opción.</p>
+      </div>
+      <div class="col-sm-6 col-lg-4 feature">
+        <img src="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/new/8.png" alt="Tu pones el candado">
+        <h4>Tu pones el candado</h4>
+        <p>Tu tienes el control , es por tu tranquilidad.</p>
+      </div>
+      <div class="col-sm-6 col-lg-4 feature">
+        <img src="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/new/9.png" alt="Instalaciones seguras">
+        <h4>Instalaciones seguras</h4>
+        <p>Cámaras CCTV, seguridad 24/7, control de humedad, póliza de seguros y personal confiable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="container">
+    <h2 class="h3 m-0">Llámanos ahora al : <a href="tel:3182826640">3182826640</a>, tenemos una promoción para ti.</h2>
+  </div>
+</div>
+
+<footer id="contact">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <h4>Ubicaciones</h4>
+        <p>Cll. 77 N° 20b - 19 Bogotá<br>Cr 46 No 104c-10 Bogotá</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Contacto</h4>
+        <p><a href="tel:3182826640">3182826640 - Bogotá</a><br><a href="mailto:info@colstorage.com.co">info@colstorage.com.co</a></p>
+      </div>
+      <div class="col-md-4">
+        <h4>Redes sociales</h4>
+        <p><a href="https://www.facebook.com/Colstorage" target="_blank" rel="noopener">Facebook</a> &middot; <a href="https://twitter.com/Colstorage1" target="_blank" rel="noopener">Twitter</a></p>
+      </div>
+    </div>
+    <p class="text-center small mt-4 mb-0">© 2020 todos los derechos reservados Colstorage Mini bodegas Bogotá</p>
+  </div>
+</footer>
+
+<div class="float-btns">
+  <a href="https://api.whatsapp.com/send?phone=573182826640&amp;text=Hola,%20estoy%20interesado%20en%20un%20servicio%20de%20minibodegas" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <img src="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/WhatsApp.png" alt="WhatsApp">
+  </a>
+  <a href="tel:3182826640" aria-label="Llamar">
+    <img src="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/call.png" alt="Llamar">
+  </a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Cerrar el menú móvil al elegir una opción
+  document.querySelectorAll('#menu .nav-link').forEach(function (l) {
+    l.addEventListener('click', function () {
+      var m = document.getElementById('menu');
+      if (m.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(m).hide();
+    });
+  });
+</script>
+</body>
+</html>
