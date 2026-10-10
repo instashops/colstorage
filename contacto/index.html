@@ -14,7 +14,8 @@
   <script>
   function gtag_report_conversion(url) {
     var callback = function () {
-      if (typeof(url) != 'undefined') {
+      if (typeof(url) != 'undefined' && !window.__waOpened) {
+        window.__waOpened = true;
         window.location = url;
       }
     };
@@ -41,9 +42,6 @@
     .card{max-width:420px}
     .logo{background:#fff;border-radius:12px;padding:6px 12px;display:inline-block;margin-bottom:28px}
     .logo img{height:38px;display:block}
-    .spinner{width:54px;height:54px;border-radius:50%;border:5px solid rgba(255,255,255,.15);border-top-color:#25d366;
-      margin:0 auto 22px;animation:spin .9s linear infinite}
-    @keyframes spin{to{transform:rotate(360deg)}}
     h1{font-size:1.35rem;margin-bottom:8px}
     p{color:#c3ced6;margin-bottom:26px}
     a.btn{display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;text-decoration:none;
@@ -74,10 +72,11 @@
     // Al hacer clic: registra la conversión de Google Ads y luego abre WhatsApp
     document.getElementById("wa").addEventListener("click", function (e) {
       e.preventDefault();
-      var opened = false;
-      function go(){ if (opened) return; opened = true; window.location = WA; }
       gtag_report_conversion(WA);
-      setTimeout(go, 1200); // respaldo si Google no responde (p. ej. bloqueador de anuncios)
+      // Respaldo: si Google no responde (p. ej. bloqueador de anuncios), abre WhatsApp igual
+      setTimeout(function () {
+        if (!window.__waOpened) { window.__waOpened = true; window.location = WA; }
+      }, 1200);
     });
   </script>
 </body>
