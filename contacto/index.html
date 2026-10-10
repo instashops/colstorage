@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-976867254"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-976867254');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Conectando con WhatsApp | Colstorage</title>
+  <link rel="icon" type="image/png" href="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/ico/favicon.png">
+  <meta name="theme-color" content="#14212b">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Poppins',system-ui,sans-serif;min-height:100vh;display:grid;place-items:center;
+      background:#14212b;color:#fff;text-align:center;padding:24px}
+    .card{max-width:420px}
+    .logo{background:#fff;border-radius:12px;padding:6px 12px;display:inline-block;margin-bottom:28px}
+    .logo img{height:38px;display:block}
+    .spinner{width:54px;height:54px;border-radius:50%;border:5px solid rgba(255,255,255,.15);border-top-color:#25d366;
+      margin:0 auto 22px;animation:spin .9s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    h1{font-size:1.35rem;margin-bottom:8px}
+    p{color:#c3ced6;margin-bottom:26px}
+    a.btn{display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;text-decoration:none;
+      font-weight:700;padding:14px 26px;border-radius:999px}
+    a.btn img{width:26px;height:26px}
+    @media (prefers-reduced-motion:reduce){.spinner{animation:none}}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo"><img src="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/logo.png" alt="Colstorage"></div>
+    <div class="spinner" aria-hidden="true"></div>
+    <h1>Te estamos llevando a WhatsApp…</h1>
+    <p>En un momento abrimos el chat para tu primer mes gratis.</p>
+    <a class="btn" id="wa" href="#">
+      <img src="https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/WhatsApp.png" alt="">
+      Abrir WhatsApp
+    </a>
+  </div>
+
+  <script>
+    var WA = "https://api.whatsapp.com/send?phone=573182826640&text=" +
+      encodeURIComponent("Hola, quiero la promoción del primer mes gratis en mini bodegas");
+    document.getElementById("wa").href = WA;
+
+    // Espera un momento para que Google Ads registre la visita y luego abre WhatsApp
+    var done = false;
+    function go(){ if (done) return; done = true; window.location.replace(WA); }
+    gtag('event', 'page_view', { event_callback: go });
+    setTimeout(go, 1500);
+  </script>
+</body>
+</html>
