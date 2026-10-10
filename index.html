@@ -22,9 +22,15 @@
     .navbar-brand img { height:48px; }
     .navbar .nav-link { color:#fff; text-transform:uppercase; font-size:.85rem; font-weight:600; letter-spacing:.5px; }
     .navbar .nav-link:hover { color:var(--cs-primary); }
-    .hero { background:linear-gradient(135deg,var(--cs-dark),#34495e); color:#fff; padding:150px 0 90px; text-align:center; }
-    .hero h1 { font-weight:700; font-size:clamp(2rem,5vw,3.4rem); text-transform:uppercase; }
-    .hero p { font-size:1.25rem; font-style:italic; max-width:720px; margin:1rem auto 2rem; }
+    .hero { position:relative; color:#fff; text-align:center; background:var(--cs-dark); }
+    .hero .carousel-item { min-height:clamp(480px,80vh,760px); background-size:cover; background-position:center; }
+    .hero .carousel-item::before { content:""; position:absolute; inset:0; background:rgba(0,0,0,.45); }
+    .hero .slide-content { position:relative; z-index:1; display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:inherit; padding:120px 16px 80px; }
+    .hero .slide-1 { background-image:url("https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/bg-1.jpg"); }
+    .hero .slide-2 { background-image:url("https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/bg-2.jpg"); }
+    .hero .slide-3 { background-image:url("https://colstorage.com.co/pagina-colstorage-bootstrap/assets/img/bg-3.jpg"); }
+    .hero h1 { font-weight:700; font-size:clamp(2rem,5vw,3.4rem); text-transform:uppercase; text-shadow:0 2px 8px rgba(0,0,0,.5); }
+    .hero p { font-size:1.25rem; font-style:italic; max-width:720px; margin:1rem auto 2rem; text-shadow:0 1px 6px rgba(0,0,0,.5); }
     .carousel-indicators [data-bs-target]{ background:var(--cs-primary); }
     .btn-cs { background:var(--cs-primary); color:#fff; font-weight:700; text-transform:uppercase; border:none; padding:.8rem 2rem; }
     .btn-cs:hover { background:#d68910; color:#fff; }
@@ -65,29 +71,41 @@
 </nav>
 
 <header class="hero">
-  <div class="container">
-    <div id="slider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-      <div class="carousel-inner pb-5">
-        <div class="carousel-item active">
+  <div id="slider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-inner">
+      <div class="carousel-item active slide-1">
+        <div class="slide-content">
           <h1>Mini bodegas</h1>
           <p>Espacios independientes, de todos los tamaños.</p>
+          <a href="#about" class="btn btn-cs">Conoce más</a>
         </div>
-        <div class="carousel-item">
+      </div>
+      <div class="carousel-item slide-2">
+        <div class="slide-content">
           <h1>Cajas plásticas en espacios compartidos - Smartbox</h1>
           <p>Son cajas de seguridad plásticas apiladas en espacios compartidos, donde tu guardas tus objetos y solicitas que las llevemos a donde tú quieras</p>
+          <a href="#about" class="btn btn-cs">Conoce más</a>
         </div>
-        <div class="carousel-item">
+      </div>
+      <div class="carousel-item slide-3">
+        <div class="slide-content">
           <h1>Transporte urbano</h1>
           <p>Desde la Guajira hasta Leticia llevamos tus mercancías</p>
+          <a href="#about" class="btn btn-cs">Conoce más</a>
         </div>
       </div>
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Mini bodegas"></button>
-        <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Smartbox"></button>
-        <button type="button" data-bs-target="#slider" data-bs-slide-to="2" aria-label="Transporte urbano"></button>
-      </div>
     </div>
-    <a href="#about" class="btn btn-cs mt-2">Conoce más</a>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Mini bodegas"></button>
+      <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Smartbox"></button>
+      <button type="button" data-bs-target="#slider" data-bs-slide-to="2" aria-label="Transporte urbano"></button>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#slider" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Siguiente</span>
+    </button>
   </div>
 </header>
 
